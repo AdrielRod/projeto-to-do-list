@@ -39,19 +39,22 @@ button{
 ul{
     color: white;
     list-style-type: none;
+    max-width: 290px;
 }
 li{
     margin-left: 20px;
-    width: 260px;
-    border: 1px solid red;
+    max-width: 60%;
+
     margin-bottom: 10px;
+    text-overflow: ellipsis;
 }
 #container{
-    display: flex;
+    position: absolute
 }
 a{
     color: white;
-    border: 1px solid red;
+    position: absolute;
+    left: 305px;
     display: inline;
     
 }
