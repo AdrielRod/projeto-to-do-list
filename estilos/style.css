@@ -3,6 +3,12 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
+}
+#espaco{
+
+    width: 100vw;
+    height: 30%;
 }
 #app{
     margin: 0 auto;
@@ -10,8 +16,6 @@
     width: 400px;
     height: 400px;
     border-radius: 20px;
-
-
 }
 body{
     display: flex;
@@ -29,32 +33,59 @@ input{
 input::placeholder{
     color: rgb(175, 175, 177);
 }
-button{
+#registrar{
     background-color: white;
     border: none;
     width: 90px;
     height: 27px;
     border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.8s;
 }
 ul{
     color: white;
     list-style-type: none;
-    max-width: 290px;
+
+    width: 290px;
+    min-height: 50px;
+    text-overflow: clip;
+    margin-left: 20px;
 }
 li{
     margin-left: 20px;
     max-width: 60%;
-
     margin-bottom: 10px;
-    text-overflow: ellipsis;
 }
 #container{
-    position: absolute
+    display: block;
+    text-overflow: clip;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    height: 330px;
 }
-a{
-    color: white;
-    position: absolute;
-    left: 305px;
+
+#container > ul > p{
+    width: 98%;
+    margin: 10px 0px 10px 10px;
+    transition: all 0.8s;
+}
+#app > #container > ul > button{
+    background-color: white;
+    border: none;
+    width: 90px;
+    height: 27px;
+    margin-left: 10px;
     display: inline;
-    
+    border-radius: 20px ;
+    transition: 0.8s;
 }
+#app > #container > ul > button:hover{
+    background-color: red;
+    transition: 0.8s;
+    margin-left: 20px;
+}
+#registrar:hover{
+    background-color: rgb(39, 209, 39);
+    transition: 0.8s;
+}
+

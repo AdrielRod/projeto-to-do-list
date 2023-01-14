@@ -17,15 +17,15 @@ function renderTarefas()
     tarefas.map((tarefa) =>{
 
         //Criando um novo elemento lista e armazenando ele numa váriavel chamada item.
-        var item = document.createElement('li')
+        var item = document.createElement('p')
         //O método abaixo cria um novo texto com o nome da task dada pelo usuario e armazena na variável
         var tarefaText = document.createTextNode(tarefa)
 
-        //Criando um novo elemento ancora e armazenando ele numa variavel
-        var linkElement = document.createElement('a')
+        //Criando um novo elemento botão e armazenando ele numa variavel
+        var linkElement = document.createElement('button')
 
-        //Adicionando o atributo href e valor # para a ancora que criamos anteriormente.
-        linkElement.setAttribute("href", "#")
+        //Adicionando o atributo onclick e o evento excluir para a botão que criamos anteriormente.
+        linkElement.setAttribute("onclick", "excluirTarefa()")
 
         //Aqui eu crio uma variável para receber a posição do index da array CLICADA. Ou seja, se eu clicar em EXCLUIR, eu vou acabar adquirindo qual foi apertada.
         let position = tarefas.indexOf(tarefa)
@@ -43,7 +43,7 @@ function renderTarefas()
         item.appendChild(tarefaText)
 
         //Aqui eu também adiciono o texto da ancora dentro da lista
-        item.appendChild(linkElement)
+        listElement.appendChild(linkElement)
         
         //E aqui eu adiciono tudo que tá no item já dentro do elemento ul, que é a lista não ordenada
         listElement.appendChild(item)
@@ -58,7 +58,7 @@ renderTarefas()
 function registrar()
 {
     //Se o usuario não preencher o input e apertar no botão, ele será alertado e impedido de prosseguir
-    if(inputElement === '')
+    if(inputElement.value === '')
     {
         alert("Digite algo")
         return false
@@ -95,5 +95,6 @@ function salvarDados()
     localStorage.setItem("@listaTarefas", JSON.stringify(tarefas))
 }
 
-button.onclick = registrar
+
+
 
