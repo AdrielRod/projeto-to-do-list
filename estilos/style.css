@@ -41,6 +41,7 @@ input::placeholder{
     border-radius: 10px;
     margin-bottom: 10px;
     transition: 0.8s;
+    cursor: pointer;
 }
 ul{
     color: white;
@@ -78,6 +79,7 @@ li{
     display: inline;
     border-radius: 20px ;
     transition: 0.8s;
+    cursor: pointer;
 }
 #app > #container > ul > button:hover{
     background-color: red;
